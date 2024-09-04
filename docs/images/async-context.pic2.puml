@@ -1,0 +1,21 @@
+@startuml
+
+state "REST Controller" as root
+state "Service" as service
+state "Repository" as repository
+state "Message Bus" as message_bus
+state "Metrics" as metrics
+state "Logging" as logging
+state "Consumer" as consumer
+
+[*] --> root
+root --> service: context
+service --> repository: context
+service --> message_bus: context
+service -[dotted]-> metrics: context
+service -[dotted]-> logging: context
+message_bus -[dotted]-> consumer: context
+
+root: **{ userId: 123, traceId: 4567 }**
+
+@enduml

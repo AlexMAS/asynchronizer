@@ -1,0 +1,12 @@
+@startuml
+
+state "Stage 1" as s1
+state "Stage 2" as s2
+state "..." as s3
+state "Stage N" as sn
+
+s1 -> s2
+s2 -> s3
+s3 -> sn
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+
+state "REST-контроллер" as root
+state "Служба" as service
+state "Хранилище" as repository
+state "Шина сообщений" as message_bus
+state "Метрики" as metrics
+state "Логирование" as logging
+state "Обработчик" as consumer
+
+[*] --> root
+root --> service: контекст
+service --> repository: контекст
+service --> message_bus: контекст
+service -[dotted]-> metrics: контекст
+service -[dotted]-> logging: контекст
+message_bus -[dotted]-> consumer: контекст
+
+root: **{ userId: 123, traceId: 4567 }**
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+
+state "Стадия 1" as s1
+state "Стадия 2" as s2
+state "..." as s3
+state "Стадия N" as sn
+
+s1 -> s2
+s2 -> s3
+s3 -> sn
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+
+state "Root Thread" as root
+state "Thread 1" as t1
+state "Thread 1.1" as t11
+state "Thread 1.1.1" as t111
+state "Thread 1.2" as t12
+state "Thread 2" as t2
+state "Thread 2.1" as t21
+state "Thread 2.2" as t22
+state "Thread 2.2.1" as t221
+state "Thread 2.2.2" as t222
+state "Thread 2.3" as t23
+
+[*] --> root
+root --> t1
+root --> t2
+t1 --> t11
+t1 --> t12
+t2 --> t21
+t2 --> t22
+t2 --> t23
+t11 --> t111
+t22 --> t221
+t22 --> t222
+
+@enduml
