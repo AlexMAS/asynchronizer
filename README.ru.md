@@ -2,6 +2,8 @@
 
 ![Asynchronizer](logo-128.png)
 
+[![javadoc][asynchronizer-javadoc-badge]][asynchronizer-javadoc-page]
+
 Java Concurrent API не предоставляет достаточных возможностей для комфортной разработки
 асинхронного кода и работы с ним. Всякий раз приходится что-то изобретать, иначе прикладная
 логика может потеряться на фоне обилия технических деталей, необходимых для поддержки асинхронности.
@@ -26,6 +28,30 @@ CompletableFuture<Void> pull(String repository) {
 }
 ```
 
+## Установка
+
+**Gradle**
+```groovy
+implementation 'ru.asynchronizer:asynchronizer:1.0.0'
+```
+
+**Gradle** (Kotlin)
+```kotlin
+implementation("ru.asynchronizer:asynchronizer:1.0.0")
+```
+
+**Maven**
+```xml
+<dependency>
+    <groupId>ru.asynchronizer</groupId>
+    <artifactId>asynchronizer</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
 ## Документация
 
 * [Руководство по использованию](docs/README.ru.md)
+
+[asynchronizer-javadoc-badge]: https://javadoc.io/badge2/ru.asynchronizer/asynchronizer/javadoc.svg
+[asynchronizer-javadoc-page]: https://javadoc.io/doc/ru.asynchronizer/asynchronizer
